@@ -67,18 +67,24 @@
 
 - 🔔 Order details and table bookings are sent directly to the restaurant host via **Telegram Bot**
 - 📝 All user logins are recorded in **Google Sheets** in real-time
-- 🌐 Hosted on [Vercel](https://vercel.com/) for fast and secure deployment
+- 🌐 Hosted on [Vercel](https://foodora-theta.vercel.app/) for fast and secure deployment
 
 ---
-/Foodora
-├── index.html
-├── styles.css
-├── script.js
-├── /assets
-│ └── food-images, icons, etc.
-├── /functions
-│ └── telegram.js, otp.js
-└── README.md
+## 📂 Folder Structure
+
+📁 Foodora
+├── 📄 index.html → Main homepage (landing page)
+├── 📄 styles.css → Custom CSS styling
+├── 📄 script.js → Handles frontend interactivity
+│
+├── 📁 assets/ → Static assets (images, icons, etc.)
+│ └── 🖼️ food-images/
+│
+├── 📁 functions/ → Integration logic
+│ ├── 📄 telegram.js → Telegram bot API for orders & booking
+│ └── 📄 otp.js → Email OTP logic via Google Apps Script
+│
+└── 📄 README.md → Project documentation
 
 
 ---
@@ -94,5 +100,5 @@
 > _“Great food. Great tech. Great experience.”_
 
 
-## 📂 Folder Structure (Simplified)
+
 
