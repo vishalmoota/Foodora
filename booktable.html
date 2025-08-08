@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food and Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navigation-wrap">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="site logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Explore Food</a>
+                          </li>
+                        
+                          <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Sign Up/Out</a>
+                          </li>
+                          <li><button class="main-btn" onclick="window.location.href='about.html';">Contact Us</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container booking-section">
+        <div class="booking-form">
+            <h2>Book a Table</h2>
+            <form id="bookTableForm">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="date" name="date" id="date" required>
+                <input type="number" name="persons" id="persons" placeholder="Number of Persons" required>
+                <input type="time" name="time" id="time" required>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                <button type="submit" class="book-btn">Book Table</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        
+
+
+
+  
+         // Check if the user is logged in
+if (!localStorage.getItem("user")) {
+    window.location.href = "login.html"; // Redirect to login page 
+}
+
+        
+        document.getElementById('bookTableForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const persons = document.getElementById('persons').value;
+            const time = document.getElementById('time').value;
+            const phone = document.getElementById('phone').value;
+            const bookBtn = document.querySelector('.book-btn'); // Get button
+
+            // Change button text and disable it
+            bookBtn.textContent = "Booking...";
+            bookBtn.disabled = true;
+
+            // Create booking object
+            const booking = { name, date, persons, time, phone };
+
+            // Store the booking in localStorage
+            let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            bookings.push(booking);
+            localStorage.setItem('bookings', JSON.stringify(bookings));
+
+            // Create form data object
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('date', date);
+            formData.append('persons', persons);
+            formData.append('time', time);
+            formData.append('phone', phone);
+
+            // Send data to Google Sheets
+            fetch('https://script.google.com/macros/s/AKfycbwQrzK8mkti3zy8A-FoZ4bt93te3E9E2HNqtVLtN-QbbLln-ijEEuormdDrn0OY6q4kDw/exec', { // Replace with your actual script URL
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(responseText => {
+                if (responseText.includes("Success")) {
+                    alert("Booking successful!");
+                    window.location.href = 'bookings.html'; // Redirect to booking page
+                } else {
+                    alert("Error in booking. Try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Booking failed. Try again.");
+            })
+            .finally(() => {
+                // Reset button text and enable it
+                bookBtn.textContent = "Book Table";
+                bookBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>

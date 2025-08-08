@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h2 {
+            color: #333;
+        }
+        #user-email {
+            font-size: 18px;
+            color: #555;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #A82C48;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #A82C48;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome to Your Dashboard</h2>
+        <p id="user-email"></p>
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <script>
+        let userEmail = localStorage.getItem("user");
+
+        if (!userEmail) {
+            window.location.href = "login.html"; // Redirect to login page if not logged in
+        } else {
+            document.getElementById("user-email").innerText = "Logged in as: " + userEmail;
+        }
+
+        document.getElementById("logout-btn").addEventListener("click", function () {
+            localStorage.removeItem("user");
+            window.location.href = "login.html"; // Redirect to login after logout
+        });
+    </script>
+
+</body>
+</html>

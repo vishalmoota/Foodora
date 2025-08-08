@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <!-- Search Bar with Logo -->
+    <div class="search-container">
+        <img src="images/logo.png" alt="Logo" class="logo"> <!-- Replace with your logo URL -->
+        <input type="text" id="search" placeholder="Search menu items...">
+    </div>
+    
+    <div class="container">
+        <div class="menu">
+           
+
+            <div class="menu-item" data-name="Misal Pav" data-price="80">
+                <img src="images/food/p2.png" alt="Misal Pav">
+                <h3>Misal Pav</h3>
+                <p>₹80.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Pav Bhaji" data-price="80">
+                <img src="images/food/p3.png" alt="Pav Bhaji">
+                <h3>Pav Bhaji</h3>
+                <p>₹80.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Chhole Bhature" data-price="50">
+                <img src="images/food/p4.png" alt="Chhole Bhature">
+                <h3>Chhole Bhature</h3>
+                <p>₹50.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+           
+
+            <div class="menu-item" data-name="Pizza" data-price="239">
+                <img src="images/food/f5.jpg" alt="Misal Pav">
+                <h3>Pizza</h3>
+                <p>₹239.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Burger" data-price="99">
+                <img src="images/food/f6.jpg" alt="Burger">
+                <h3>Burger</h3>
+                <p>₹99.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="idli" data-price="60">
+                <img src="images/food/f9.jpg" alt="Idli">
+                <h3>Idli</h3>
+                <p>₹60.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-name="Dosa" data-price="60">
+                <img src="images/food/f8.jpg" alt="Dosa">
+                <h3>Dosa</h3>
+                <p>₹60.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Sandwich" data-price="49">
+                <img src="images/food/fa.jpg" alt="Sandwich">
+                <h3>Sandwich</h3>
+                <p>₹49.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Choco Lava Cake" data-price="60">
+                <img src="images/food/f7.jpg" alt="Chhole Bhature">
+                <h3>Choco Lava Cake</h3>
+                <p>₹60.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-name="Grilled Potatoes" data-price="290">
+                <img src="images/food/fb.jpg" alt="Grilled Potatoes">
+                <h3>Grilled Potatoes</h3>
+                <p>₹290.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-name="Briyani" data-price="329">
+                <img src="images/food/fc.jpg" alt="Briyani">
+                <h3>Briyani</h3>
+                <p>₹329.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Fruit Salad" data-price="89">
+                <img src="images/food/fd.png" alt="Fruit Salad">
+                <h3>Fruit Salad</h3>
+                <p>₹89.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Panner Rice" data-price="299">
+                <img src="images/food/pk.jpg" alt="Panner Rice">
+                <h3>Panner Rice</h3>
+                <p>₹299.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+           
+
+            <div class="menu-item" data-name="curry rice" data-price="239">
+                <img src="images/food/pkk.jpg" alt="Curry Rice">
+                <h3>Curry Rice</h3>
+                <p>₹239.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item" data-name="Veg Curry" data-price="130">
+                <img src="images/food/c.jpg" alt="Veg Curry">
+                <h3>Veg Curryr</h3>
+                <p>₹130.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <h3>Total: <span id="total">₹0.00</span></h3>
+            <button id="checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+   
+    
+    
+    <script src="menu.js"></script>
+</body>
+</html>

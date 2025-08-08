@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <div class="order-container">
+        <h2 class="order-heading">Enter Your Details</h2>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter your address" required></textarea>
+
+            <h2 class="order-heading">Order Summary</h2>
+            <ul id="orderSummary"></ul>
+
+            <div class="total" id="finalTotal">Total (incl. GST): ₹0.00</div>
+
+            <button type="submit" id="placeFinalOrder">Place Order</button>
+
+            <h4 class="order-heading1">For order cancellation, please call us within 30 minutes.</h4>
+        </form>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>

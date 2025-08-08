@@ -1,0 +1,194 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Global Reset */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variable Definitions */
+:root {
+    --primary-color: #A82C48;
+    --secondary-color: #43121d;
+    --third-color: #f98169;
+    --white-color: #fff;
+    --text-color: #555;
+    --black-color: #000;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Quicksand', sans-serif;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+    background: #f8f8f8;
+    padding-top: 140px; /* Adjusted to account for fixed navbar */
+}
+
+/* Navbar */
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--white-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09);
+    transition: all 0.3s ease-out;
+    padding-top: 1rem; /* Space from top to avoid overlap with header */
+}
+
+/* Navbar Links */
+.navbar-toggler:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.navigation-wrap .main-btn {
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+
+/* Page Header */
+.page-header {
+    position: fixed; /* Fixed position for the header */
+    width: 100%;
+    top: 70px; /* Adjust to sit below the navbar */
+    left: 0;
+    background: url('../images/bg/bg-3.jpg') no-repeat center;
+    background-size: cover;
+    padding: 10rem 0;
+    text-align: center;
+    color: var(--white-color);
+    z-index: 999; /* Ensure it's beneath the navbar */
+}
+
+/* Page Header Text */
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Booking Section */
+.booking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    margin-top: 50px; /* Adjust margin to make space for navbar */
+}
+
+/* Booking Form */
+.booking-form {
+    background: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form Heading */
+.booking-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    font-family: var(--secondary-font);
+}
+
+.booking-form input::placeholder {
+    color: var(--text-color);
+}
+
+/* Submit Button */
+.book-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 600;
+}
+
+.book-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+    .nav-link {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .booking-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-form {
+        width: 90%;
+    }
+}
