@@ -4,6 +4,8 @@
 
 **Foodora** is a modern, responsive restaurant web application designed to enhance the user dining experience with features like online ordering, cart management, table booking, email OTP login, and Telegram notifications.
 
+🔗 **Live Demo:** [Click here to try Foodora](https://foodora-theta.vercel.app/)
+
 ---
 
 ## 📌 Features
@@ -70,6 +72,7 @@
 - 🌐 Hosted on [Vercel](https://foodora-theta.vercel.app/) for fast and secure deployment
 
 ---
+
 ## 📁 Folder Structure Overview
 
 | Folder/File         | Description                                           |
@@ -84,7 +87,6 @@
 | └── 📄 `telegram.js`  | Sends order & booking details to Telegram             |
 | 📄 `README.md`       | Project documentation                                 |
 
-
 ---
 
 ## 👨‍💻 Developed By
@@ -96,7 +98,3 @@
 ---
 
 > _“Great food. Great tech. Great experience.”_
-
-
-
-
