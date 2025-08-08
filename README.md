@@ -70,21 +70,19 @@
 - 🌐 Hosted on [Vercel](https://foodora-theta.vercel.app/) for fast and secure deployment
 
 ---
-## 📂 Folder Structure
+## 📁 Folder Structure Overview
 
-📁 Foodora
-├── 📄 index.html → Main homepage (landing page)
-├── 📄 styles.css → Custom CSS styling
-├── 📄 script.js → Handles frontend interactivity
-│
-├── 📁 assets/ → Static assets (images, icons, etc.)
-│ └── 🖼️ food-images/
-│
-├── 📁 functions/ → Integration logic
-│ ├── 📄 telegram.js → Telegram bot API for orders & booking
-│ └── 📄 otp.js → Email OTP logic via Google Apps Script
-│
-└── 📄 README.md → Project documentation
+| Folder/File         | Description                                           |
+|---------------------|-------------------------------------------------------|
+| 📄 `index.html`      | Main homepage – user landing screen                   |
+| 📄 `styles.css`      | Custom styles for layout and responsiveness           |
+| 📄 `script.js`       | Frontend logic (login, booking, cart, etc.)           |
+| 📁 `assets/`         | All static files including images and icons           |
+| └── 🖼️ `food-images/` | Food item pictures for the menu display              |
+| 📁 `functions/`      | Backend interaction & automation scripts              |
+| ├── 📄 `otp.js`       | Sends OTP via Google Apps Script                      |
+| └── 📄 `telegram.js`  | Sends order & booking details to Telegram             |
+| 📄 `README.md`       | Project documentation                                 |
 
 
 ---
